@@ -1,139 +1,207 @@
 ---
-import { Link2, Lock } from '@lucide/astro';
+import { Link2 } from '@lucide/astro';
 import LinkButton from './LinkButton.astro';
-import { TAGS, ADMIN_TOOLS, PROJECT_STATUS } from './TagsIcons.astro';
+import { TAGS } from './TagsIcons.astro';
 import Modal from './Modal.astro';
 import ImageModal from './ImageModal.astro';
 
 const PROJECTS = [
 	{
-		title: 'AgroTraz - Gestion de Fabricas',
-		description: `Desarrollo de una plataforma de gestión integral para fábricas, diseñada para optimizar la administración de recursos y procesos. La aplicación permite a los usuarios gestionar y controlar diversos aspectos de la producción, incluyendo la planificación, seguimiento y análisis de datos en tiempo real.\n
-		La interfaz de usuario es intuitiva y fácil de usar, lo que facilita la navegación y el acceso a la información crítica. La plataforma incluye funcionalidades avanzadas como la generación de informes personalizados, la integración con sistemas externos y la capacidad de adaptarse a las necesidades específicas de cada fábrica.\n
-		Además, se implementaron medidas de seguridad robustas para proteger la información sensible y garantizar la privacidad de los datos. La aplicación está diseñada para ser escalable y flexible, permitiendo a las fábricas crecer y adaptarse a los cambios en el mercado y en la tecnología.`,
-		link: 'https://www.agrotraz.com/',
-		image: ['/projects/gesfap.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.ASTRO, TAGS.REACT, TAGS.TAILWIND, TAGS.DOCKER, TAGS.MARIADB],
-		status: PROJECT_STATUS.IN_PROGRESS,
-		adminTool: ADMIN_TOOLS.VPS,
-		modalAnimation: { animation: 'bounce' as const, duration: 700 },
-		imageAnimation: { animation: 'slide' as const, from: 'top' as const, duration: 450 }
+		title: '"The 20th... Just the Beginning" – SRCA Ramadan 1447 Milestone',
+		description: `As we close the chapter on a historic Ramadan 1447, we aren't just finishing a season—we are celebrating 20 years of emergency medical volunteering in Madinah. This year’s theme, "The 20th... Just the Beginning," reflects a legacy that is only growing stronger.
+
+The peak of this journey was "شفت الختمة" (The Night of the Quran Completion). Serving over 1,200,000 worshippers across Al-Masjid an-Nabawi, Masjid Quba, and Miqat Dhu al-Hulayfah was a masterclass in logistics. The sheer scale of the crowd management and the brilliant planning executed by the General Authority for the Care of the Affairs of the Grand Mosque and the Prophet's Mosque, Hajj & Umrah Security Forces, Civil Defense, us (SRCA) and all supporting authorities was nothing short of inspiring.
+
+What set this year apart was the unprecedented level of technical support and equipment provided to our teams. The investment in advanced medical machinery and specialized vehicles was a game-changer. Most notably, the deployment of the "Rufaidah" Medical Units—custom-engineered for the Two Holy Mosques as far as I know—allowed us to navigate the densest crowds with precision, reaching patients in record time where standard vehicles simply couldn't go.
+
+I am incredibly proud to have been part of this milestone through three major roles:
+1- Field Leadership & Excellence: Honored to be awarded as one of the Outstanding Volunteers for my emergency medical response performance. Managing the pressure of Al-haram alongside a dedicated team of 250+ volunteers was a profound responsibility.
+2- Creative Direction: I had the privilege of designing almost 80% of the season's celebration visuals—from official posters and certificates to the volunteers and commemorative plaques for our partners that defined the identity of this 20th anniversary in a really short time frame with me and my supervisor are the only designers. we worked even during Eid and finished such a big project in 5 days.
+3- National Representation: Serving as the Madinah Region graphic design representative for the National Umrah Season Design Campaign under the General Directorate of Corporate Communication, representing my city among the Kingdom's 13 regions.
+
+This season was a testament to what happens when cutting-edge technology meets a heart for service. I’m REALLY grateful to the Saudi Red Crescent and all our partners for making this the most successful season yet. Here’s to the next 20 years. 🌙✨`,
+		link: 'https://www.behance.net/gallery/247875201/My-design-work-for-Ramadan-season-1447-SRCA',
+		image: ['/projects/20start.jpg'],
+		tags: [TAGS.GRAPHICS_DESIGN, TAGS.TEAMWORK, TAGS.NATIONAL_REPRESENTING, TAGS.ADOBE_CC, TAGS.HIGH_DEMANDING, TAGS.EMS],
+		date: '18-02-2026 to 28-03-2026',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'Goblin Ajedrez - Juego de ajedrez online',
-		description: `GoblinAjedrez es un proyecto en el que he trabajado en la optimización y mejora integral de su estructura y funcionalidad. He reescrito la mayoría de los archivos, optimizándolos y definiendo correctamente cada función, constante y parámetro para mejorar la legibilidad y el mantenimiento del código. Además, he realizado una optimización del SEO y la mejora de los metadatos para incrementar la visibilidad en buscadores.\n
-		El logo original en formato PNG fue convertido a SVG para garantizar su correcta visualización en distintos tamaños y dispositivos. En términos de diseño, implementé Bootstrap para mejorar la estética y mantener una experiencia de usuario coherente con la estructura previa del proyecto, basado en Python, archivos .py, templates y archivos estáticos. También realicé una reorganización de la estructura de carpetas internas para optimizar la gestión de los archivos.\n
-		La sección de puzzles ha sido completamente rediseñada e implementada desde cero, incluyendo tres modos de juego distintos: puzzles de tres vidas, puzzles de tres minutos y puzzles por temas. Estos últimos cuentan con una amplia gama de ejercicios diseñados para el entrenamiento, organizados en diferentes tipos, apartados y subcategorías. También se han incorporado puzzles por rating, permitiendo una experiencia más personalizada según el nivel del usuario. Todo el sistema ha sido reescrito con la integración de Chessground, proporcionando un tablero más avanzado que permite modificar tanto el fondo como las piezas, con más de veinte opciones distintas para cada uno. Además, este nuevo tablero es completamente redimensionable y ha mejorado significativamente la experiencia en dispositivos móviles, eliminando errores previos como bloqueos o fallos en la interacción táctil. También se ha añadido soporte para el clic secundario, permitiendo la creación de círculos, flechas y diferentes estados antes de realizar un movimiento.\n
-		Junto con estas mejoras, corregí errores en enlaces y rutas, asegurando una navegación más intuitiva. Implementé ajustes en la estructura de los cursos, optimizando su accesibilidad y funcionalidad. El diseño fue adaptado para ser completamente responsivo, garantizando una experiencia óptima en dispositivos móviles y tablets. Se añadió la posibilidad de alternar entre un modo oscuro y un modo claro para mejorar la accesibilidad y personalización del entorno. También implementé un sistema de autenticación que incluye registro y login mediante correo y contraseña, con notificaciones enviadas al correo electrónico para mayor seguridad.\n
-		Con todas estas mejoras, GoblinAjedrez es ahora una plataforma más eficiente, rápida y accesible, proporcionando una mejor experiencia tanto para jugadores como para estudiantes de ajedrez.`,
-		link: 'https://goblinajedrez.com/',
-		image: ['/projects/goblinajedrez.webp', '/projects/goblinajedrez-1.webp', '/projects/goblinajedrez.webp'],
-		tags: [TAGS.PYTHON, TAGS.JINJA2, TAGS.HTML, TAGS.BOOTSTRAP, TAGS.SQLITE],
-		status: PROJECT_STATUS.IN_PROGRESS,
-		adminTool: ADMIN_TOOLS.VPS,
-		modalAnimation: { animation: 'slide' as const, from: 'left' as const, duration: 500 },
-		imageAnimation: { animation: 'zoom' as const, duration: 550 },
-		history: [
-			{
-				date: '2024-01-15',
-				tags: [TAGS.PYTHON, TAGS.JINJA2, TAGS.HTML, TAGS.BOOTSTRAP, TAGS.SQLITE],
-				description: 'Versión inicial con Python y Flask'
-			},
-			{
-				date: '2025-12-10',
-				tags: [TAGS.REACT, TAGS.TYPESCRIPT, TAGS.TAILWIND, TAGS.VITE, TAGS.NODE, TAGS.EXPRESS, TAGS.MARIADB],
-				description: 'Migración completa a React y TypeScript con backend en Express'
-			}
-		]
+		title: 'Volunteer Shift Scheduling Optimizer (SRCA Madinah - Discontinued)',
+		description: `The Vision: Modernizing EMS Operations at Scale
+In one of the most demanding operational environments in the world—Al-Masjid An-Nabawi during Ramadan and Hajj—scheduling isn't just an administrative task; it's a mission-critical operation. Managing ≈500 volunteers across millions of worshippers was previously a manual, grueling process that took supervisors hours of repetitive work. I developed this purpose-built scheduling system to transition the Saudi Red Crescent Authority (SRCA) Madinah Volunteer Department from a manual, random workflow to an automated, deterministic, preference-aware system.
+
+The Engineering: Deterministic Logic & Load Balancing
+At the heart of the system is a Deterministic Greedy Algorithm designed in Python. Unlike a random generator, this algorithm ensures fairness and consistency by prioritizing volunteers with fewer assigned shifts (load balancing) while respecting individual availability and preferences.
+
+The Tech Stack: I built the backend with Python (Pandas, NumPy, OpenPyXL) for data heavy-lifting and used PyWebView to create a modern desktop UI using HTML, CSS, and JavaScript.
+
+The "Excel Excellence" Engine: Knowing that the final output needed to be field-ready, I engineered a robust export system that generates styled .xlsx files complete with shift coloring, role separation, and even logo embedding—with safe-fail triggers to ensure exports never crash.
+
+The Workflow: AI-Assisted Rapid Development
+This project was a masterclass in modern development. I utilized a heavily AI-assisted workflow, acting as the lead architect and coder while using AI to refine algorithms, debug complex state persistence in JSON, and refactor code for high maintainability. This allowed me to move from a conceptual "problem" to a functional, internal-use "product" that significantly reduced supervisor workload and eliminated human error in shift distribution.`,
+		link: 'https://github.com/muhamedanber/SRCA-VoulnteerShiftHandler/blob/main/README.md',
+		image: ['/projects/srcashift.png'],
+		tags: [TAGS.PYTHON, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.GITHUB, TAGS.PLAN_MAKING, TAGS.EMS, TAGS.HIGH_DEMANDING],
+		date: '28-11-2025 to 13-01-2026',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'ETTG',
-		description: `El European Think Tanks Group (ETTG) es una red de seis think tanks europeos independientes que colaboran para proporcionar investigación y análisis innovadores y relevantes para las políticas relacionadas con la cooperación internacional de la Unión Europea y el desarrollo sostenible global.`,
-		link: 'https://ettg.eu/',
-		image: ['/projects/ettg.webp'],
-		tags: [],
-		status: PROJECT_STATUS.IN_PROGRESS,
-		adminTool: ADMIN_TOOLS.WORDPRESS,
-		bgColor: '#089C80',
-		modalAnimation: { animation: 'zoom' as const, duration: 400 },
-		imageAnimation: { animation: 'bounce' as const, duration: 700 }
+		title: 'SRCA Logistics team Design – Ramadan 1446',
+		description: `For the Ramadan 2025 (1446H) season, I produced the first set of official visual guides for the SRCA Medical Supply and Logistics volunteer Team in Madinah. The project focused on operational efficiency during peak crowds at the Prophet’s Mosque.
+
+Key Deliverables:
+• EMS Bag Inventory Guide: A visual reference for rapid supply identification.
+• Committee Operational Guidelines: A protocol manual for the volunteer team.
+
+This project combined my background in Adobe CC with my frontline experience in EMS, ensuring that technical information was clear, accessible, and mission-ready.`,
+		link: 'https://www.behance.net/gallery/221477171/SRCA-Volunteer-Medical-Supply-Team-Designs-Ramadan-2025',
+		image: ['/projects/tamween.png'],
+		tags: [TAGS.EMS, TAGS.GRAPHICS_DESIGN, TAGS.ADOBE_CC],
+		date: '28-02-2025 to 15-03-2025',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'CMS - Incantatem',
-		description: `Creación de un CMS personalizado enfocado en la gestión eficiente de archivos e imágenes. Este sistema permite a los administradores subir, editar y organizar archivos multimedia, generando metadatos en formato JSON que vinculan cada elemento con su información correspondiente.\n
-		El CMS cuenta con dos vistas: una para usuarios no técnicos que facilita la visualización y modificación de datos sin necesidad de interactuar con JSON, y otra avanzada para usuarios técnicos que permite editar el JSON directamente. Además, se implementó una funcionalidad en tiempo real utilizando WebSocket, lo que permite monitorear y visualizar cambios en el stock de los elementos.\n
-		Este proyecto no solo optimiza la gestión de contenido, sino que también integra características avanzadas para adaptarse a las necesidades específicas de la tienda.`,
+		title: 'Giza Tech Support Dept. Restoration – Egyptian Red Crescent (Giza)',
+		description: `The Situation: A Crisis of Continuity
+In March 2025, I was appointed as the Technical Support Supervisor for the Giza branch of the Egyptian Red Crescent (ERC). Giza is a vital strategic hub, standing as the organization’s largest branch after the national headquarters in Nasr City. I transitioned into this role during a period of extreme administrative volatility; the previous supervisor departed suddenly, leaving a massive power vacuum and a department that consisted of only two active personnel: myself and one colleague.
+
+The Challenge: Two Years of Digital Debt
+Upon gaining access to the centralized Database (DB) and management systems, I discovered a critical failure in data continuity. The system had not been consistently updated for nearly two years. We were faced with four months of overdue tasks from the transition period alone, on top of 24 months of "piled" logs, reports, and system entries that were essentially missing or disorganized. The "team" was non-existent, and the infrastructure of one of Egypt's most important humanitarian branches was at risk of total administrative collapse.
+
+The Solution: Infrastructure Rebuild & Role Specialization
+My colleague and I implemented a "Divide and Conquer" strategy to stabilize the branch:
+• System & Data Management: I took full ownership of the database, system logs, and digital volunteers’ platform, digital reporting and building the team from the ground up with my colleague. I began a manual audit and "back-fill" process to restore two years of missing data while simultaneously handling live technical requests.
+• Logistics & Paperwork: My colleague managed the physical forms and data entry missions, ensuring that the manual side of the operation matched our digital records.
+• Team Scaling: We moved from being a two-man "cleanup crew" to a functional department. We began recruiting and distributing tasks among a new wave of volunteers, building a structured team where none existed before.
+
+The Result: Operational Excellence
+Within nine months, we successfully cleared the two-year backlog and modernized the Giza Tech Support department. We transformed a neglected database into a real-time reporting system that now supports the branch’s vital humanitarian missions. This experience solidified my ability to manage high-pressure transitions, handle large-scale database restoration, and lead a department through an existential crisis.`,
+		link: 'https://www.linkedin.com/feed/update/urn:li:activity:7411124071330893824/',
+		image: ['/projects/erctech.jpg'],
+		tags: [TAGS.DB_MANAGEMENT, TAGS.TEAM_LEADING, TAGS.PLAN_MAKING, TAGS.TEAMWORK, TAGS.REPORT_MAKING, TAGS.SYSTEM_ADMIN, TAGS.CHAIN_OF_COMMAND, TAGS.TEAM_ANALYSIS, TAGS.HIGH_DEMANDING],
+		date: '01-03-2025 to 31-12-2025',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
+	},
+	{
+		title: 'EcoBot – 1st Place at Maharah Camp (Salem Bin Mahfouz Foundation)',
+		description: `The Vision: Innovation for a Greener Tomorrow
+In late 2024, I took on the role of Team Leader for EcoBot, a project dedicated to solving food wasting through teaching robotics and sustainable engineering. The project was developed for the Maharah Camp, a nationwide initiative by the Salem Bin Mahfouz Foundation and Isham hosted at Abdulaziz Al-Rabee High School.
+The goal wasn't just to build a robot, but to teach the students robotics while working on it, to create a viable concept for environmental problem-solving that could stand up to professional scrutiny. Leading this team meant balancing technical development with a clear, impactful presentation of our core sustainability mission.
+
+The Competition: Standing Out in the Exhibition
+The first stage of the competition was an internal exhibition organized by the school administration, with a high-stakes evaluation process. We weren't just presenting to teachers; we were being judged by a formal delegation from the Salem Bin Mahfouz Foundation.
+Competing against a wide array of student-led teams, EcoBot had to be more than just a cool prototype—it had to be a "functional idea." We focused on:
+• The Pitch: Refining our narrative to show exactly how EcoBot solved a real-world sustainability issue.
+• The Design: Ensuring our innovation was grounded in practical engineering.
+• Leadership: Managing the creative and technical contributions of every team member to ensure a cohesive final product.
+
+The Win: 1st Place and the "Preliminary" Leap
+Our hard work paid off when we were awarded 1st Place in the exhibition. While this was a preliminary stage designed to prep us for future national-level opportunities, the victory was a massive validation of our team's synergy. Being recognized by a prestigious foundation like Salem Bin Mahfouz was a turning point, proving that our "scientific track" training was translating into real-world excellence.`,
 		link: '',
-		image: ['/projects/custom_cms.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.REACT, TAGS.TAILWIND, TAGS.DOCKER],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.VPS,
-		modalAnimation: { animation: 'slide' as const, from: 'top' as const, duration: 450 },
-		imageAnimation: { animation: 'fade' as const, duration: 600 }
+		image: ['/projects/ecobot.jpg'],
+		tags: [TAGS.ARDUINO, TAGS.CPP, TAGS.ENVIRONMENTAL_AWARENESS, TAGS.TEAM_LEADING, TAGS.PROTOTYPE_BUILDING, TAGS.REPORT_MAKING],
+		date: '15-12-2024 to 25-12-2024',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
+	},
+
+	{
+		title: '"Practice Makes Perfect" (PMP) – From Student to Instructor',
+		description: `After the "See Sus Call" project, something shifted. Even though the digital campaign didn't go viral, that 40-minute talk at my school changed everything. I realized that I didn't just want to build tools; I wanted to build people. I saw that I had a knack for breaking down complex ideas and keeping an audience engaged. That realization was the birth of PMP: Practice Makes Perfect.
+I knew that being a good speaker wasn't enough—I wanted to be a professional educator. I decided to take ToT (Training of Trainers) courses to understand the actual science of teaching. I studied how to structure a curriculum, how to manage a classroom, and how to use interactive learning to make sure information actually sticks.
+I didn't want to be the kind of instructor who just reads off a slide. I wanted to create an environment where "practice" was the core of the experience.
+
+The Execution: Turning the School into a Training Ground
+With my ToT foundation, I went back to my school—not as a student, but as a guest lecturer and instructor. I launched a series of courses and workshops covering Graphics design and Career Development.
+
+The PMP Methodology:
+• Action-First Learning: Every lecture had to have a "hands-on" component. No one sat still for long.
+• Peer-to-Peer Mentorship: I focused on making the content relatable to my classmates, using the same language and "Gen Z" energy that the traditional curriculum lacked.
+• The Feedback Loop: I treated every lecture like a software update—collecting feedback from my peers and refining the next session to be tighter and more impactful.
+
+The Impact: Building a Legacy of Knowledge
+What started as a realization after a "failed" project turned into a consistent streak of successful lectures. I moved from being the kid struggling with English pronunciation to the one standing at the front of the room, commanding the attention of my peers.
+PMP proved that the "See Sus Call" project wasn't a washout at all—it was the essential field test for my career as an instructor. It taught me that while hardware might fail and algorithms might ignore you, a well-delivered lesson to a room full of people is a legacy that stays live forever.`,
+		link: '',
+		image: ['/projects/pmp.jpg'],
+		tags: [TAGS.PUBLIC_SPEAKING, TAGS.TRAINING, TAGS.GRAPHICS_DESIGN, TAGS.CAREER_DEVELOPMENT],
+		date: '11-02-2023 to 05-06-2023',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'ESP CUSTOMS LLC',
-		description:
-			'Responsable de la creación y desarrollo integral de la plataforma. Diseñé y desarrollé desde cero tanto el servidor como el panel web, implementando una base de datos robusta, integración de APIs internas/externas y un sistema de eventos para la comunicación y componentización del proyecto. Mejoré la eficiencia del sistema, implementé pruebas exhaustivas y una gestión continua, logrando un despliegue eficiente y un soporte eficaz.',
-		link: 'https://espcustoms.xyz',
-		image: ['/projects/espcustoms.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.ANGULAR, TAGS.BOOTSTRAP, TAGS.MONGODB],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.CLOUD,
-		imageAnimation: { animation: 'scale' as const, duration: 350 }
+		title: '"See Sus Call" – The Rise Challenge Deep Dive',
+		description: `The Vision: A Global Problem Meets a Local Voice
+In early 2022, I decided to enter the Rise Challenge, a global talent search backed by Amideast, Schmidt Futures and Rhodes Trust. The stakes were high: they were looking for "brilliance" in 15-to-17-year-olds who wanted to change the world. At the time, I didn't have a signature project ready to go. I was searching for a spark when a national anti-human trafficking campaign caught my eye.
+It was a heavy, complex topic, but I realized that awareness among youth was almost non-existent. I decided to build a campaign called "See Sus Call"—a project designed to educate peers on identifying the signs of human trafficking and taking safe, decisive action.
+
+The Language Barrier: A Mother's Mentorship
+The biggest hurdle wasn't just the topic; it was the language. Back then, my English was—to put it lightly—not where it needed to be for a global competition. However, I had a secret weapon: my mom.
+Before I was even born, she was an English Instructor at Amideast, so she became my coach, editor, and director. While she knew nothing about media production, she happily helped me with anything I wanted. We spent days conducting thorough research together, translating complex legal definitions and social concepts into a script I could deliver. She sat with me through every line, teaching me the phonetic pronunciation of every single word. It wasn't just a project; it was a 24/7 immersive English bootcamp. We were a two-person team fueled by research and a massive amount of caffeine.
+
+The "Hardware from Hell": Engineering Around 2GB RAM
+This is where the story gets technically "impossible." Most people would look at my hardware and tell me to give up. My workstation was her Toshiba Satellite—a relic from a previous decade running an Intel Core 2 Duo processor with only 2GB of RAM. To put that in perspective, opening a single Chrome tab today would probably make that laptop cry.
+I was determined to use Adobe CC like I always do with my projects, so I used Adobe After Effects. Every time I hit "Render," it felt like the laptop was preparing for takeoff. It somehow survived the motion graphics phase, but when I moved the raw footage into Adobe Premiere Pro, the system finally hit its breaking point. The software would lag for minutes just to move a clip on the timeline.
+
+The Pivot: Knowing I was racing against a hard global deadline, I had to innovate. I transferred the entire project to my mom's phone and finished the final cut using Premiere Mobile. It was a hybrid workflow born out of pure necessity—desktop for the heavy effects, mobile for the final assembly.
+
+The Production: DIY Studio & Zero Budget
+I didn't have a studio, a lightbox, or even a cheap TikTok ring light. I had to become my own Director of Photography. I built the lighting setup myself using some lamps, wires, aluminum foil, and whatever I could find to diffuse the light. We filmed the entire campaign on my mom's phone, which at the time, was our highest-quality camera, and my father's ancient Sony Cyber-shot—which actually died mid-recording.
+The production felt like a race against time. I was tweaking the edit, fixing audio levels, and double-checking the submission requirements until the very last second. I finally hit "Submit" just two hours before the global deadline.
+
+The Result: A "Fast Washout" and the Silver Lining
+In terms of "Global Winners," I washed out fast. I didn't make it past the first stage. The "See Sus Call" campaign, despite the blood, sweat, and 2GB RAM tears, reached almost no one online. The algorithm didn't pick it up, and the view count stayed at a humble low.
+
+But "Success" looked different than I expected:
+1. The School Talk: My school was kind enough to recognize the effort. They allowed me to give a formal presentation on human trafficking to my classmates. For forty minutes, "See Sus Call" wasn't a "failed" digital campaign—it was a real conversation that changed how my peers saw a global crisis.
+2. The Network: I joined the Rise Discord server during the process. While I didn't win the scholarship, I met two people who became close collaborators. One of them is still one of my friends to this day, proving that sometimes the "networking" benefit of these programs is worth more than the prize itself.
+3. The Growth: By the end of those months, my English had improved more than it had in the previous five years, and I had learned how to bully a low-end laptop into producing professional-grade content.
+
+The Lesson: "See Sus Call" taught me that you don't need a $3,000 MacBook or a perfect plan to start. You just need a problem worth solving and the grit to edit a video on a phone when your computer gives up.`,
+		link: 'https://www.behance.net/gallery/162195051/HUMAN-TRAFFICKING',
+		image: ['/projects/rise.webp'],
+		tags: [TAGS.MEDIA_PRODUCTION, TAGS.VIDEOGRAPHY, TAGS.RESEARCH, TAGS.ADOBE_CC, TAGS.SCRIPT_WRITING, TAGS.HUMAN_RIGHTS, TAGS.RISE_CHALLENGE, TAGS.GRAPHICS_DESIGN, TAGS.VIDEO_EDITING],
+		date: '12-12-2022 to 25-01-2023',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'AuraFut - Ecommerce',
-		description: `Desarrollo de una tienda online de productos deportivos estructurada en tres módulos principales. Cada componente ha sido optimizado para ofrecer una experiencia de usuario rápida y eficiente, asegurando un rendimiento óptimo de la plataforma.\n
-		Admin: Panel de administración (admin.aurafut.com) para gestionar estadísticas, productos, pedidos y usuarios, con opciones de diseño personalizables. Incluye un sistema avanzado de subida de imágenes que transcodifica a base64 con optimización previa.\n
-		Cliente: Plataforma de compra (aurafut.com), con funcionalidades como registro y login de usuarios, perfiles personales, gestión de pedidos, y un sistema avanzado de compra que incluye diversas pasarelas de pago (Paypal, Mastercard, Visa, Google Pay). También cuenta con un buscador avanzado de productos, filtros personalizables y una interfaz intuitiva para mejorar la experiencia del usuario.\n
-		Server: Servidor manejado a través de API, construido con Express, que incorpora sistemas de seguridad Middleware y autenticación de tokens, garantizando un entorno seguro y eficiente para la gestión de datos y transacciones.`,
-		link: 'https://aurafut.com',
-		image: ['/projects/aurafut.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.REACT, TAGS.BOOTSTRAP, TAGS.MONGODB],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.SHOPIFY,
-		modalAnimation: { animation: 'fade' as const, duration: 500 },
-		imageAnimation: { animation: 'slide' as const, from: 'right' as const, duration: 450 }
+		title: 'Dmagh Shaghala: The Podcast That Peaked at One Episode',
+		description: `If you're a fan of Marwan Pablo, you know the vibe: "Dmagh shaghala msh btenam." (a working brain that never sleeps) I took that energy a bit too literally and tried to build a whole design empire in a week.
+It started as a grand plan for a graphic design platform. I even had a friend acting as my "assistant" (shoutout to the early-stage hustle). But about seven days in, we realized that building a whole platform was... a lot. So, we did what every Gen Z creator does when a project gets complicated: we turned it into a podcast.
+I went all in. I managed to land a guest—a legit Egyptian graphic designer—and we recorded a solid hour of gems. She was so focused on the craft, and for a second, I thought I was the next big thing in the Middle Eastern podcast scene.
+Fast forward a year: the stats were in. 13 listeners. Not 13k, not 130. Just 13 legends tuning in to hear us talk about pixels and grids. Honestly? I love those 13 people. But eventually, I realized that "a mind that never sleeps" also needs to know when to call it a day. I pulled the plug, removed it from Spotify, and took it down from all platforms.
+It's the ultimate "launch and learn" story. It taught me how to interview, how to edit audio with Adobe Audition, and most importantly, how to recognize when a project has reached its expiration date. We don't talk about the 13 listeners—we talk about the fact that we actually got a pro designer in front of a mic and hit "record." Onwards and upwards.`,
+		link: '',
+		image: ['/projects/demagh.webp'],
+		tags: [TAGS.PODCAST, TAGS.GRAPHICS_DESIGN, TAGS.ADOBE_CC],
+		date: '26-08-2022 to 07-09-2022',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
 	{
-		title: 'Canvacard - NPM',
-		description: `Paquete NPM que permite a los desarrolladores crear tarjetas personalizadas de forma sencilla y rápida. Canvacard ofrece una amplia gama de plantillas predefinidas y personalizables, así como la posibilidad de crear tarjetas desde cero. Los usuarios pueden añadir texto, imágenes, iconos y formas, y personalizar el diseño con colores y fuentes personalizadas.\n
-		Este proyecto ha sido desarrollado con JavaScript, @napi-rs/canvas, @skyra/gifenc y con TypeScript para realizar los tipados e interfaces . Canvacard es una herramienta versátil y eficiente que permite a los desarrolladores crear tarjetas personalizadas de forma rápida y sencilla.`,
-		link: 'https://canvacard.srgobi.com/',
-		image: ['/projects/canvacard.webp'],
-		tags: [TAGS.JAVASCRIPT, TAGS.TYPESCRIPT],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.VERCEL,
-		modalAnimation: { animation: 'scale' as const, duration: 400 },
-		imageAnimation: { animation: 'slide' as const, from: 'left' as const, duration: 400 }
+		title: 'Hasanah Juz\' Amma – Mohammed Al-Minshawi',
+		description: `Every developer has a "Day Zero," and this project represents the absolute beginning of my journey into software engineering. Developed in 2020 at the age of 12, this application was born out of a desire to create a functional, accessible tool for Quranic recitation—specifically featuring the renowned Sheikh Al-Minshawi—despite having zero access to traditional development hardware.
+At the time, my "workstation" was entirely mobile. Without a PC, I turned to Sketchware, a block-based integrated development environment for Android. This forced me to learn the fundamental logic of programming—variables, event listeners, and UI/UX flow—within the constraints of a smartphone screen. The project was a masterclass in resourcefulness; I didn't have a budget for developer licenses or high-end tools, but I had the curiosity to spend hours on YouTube tutorials, reverse-engineering how logic blocks could be translated into a working mobile experience.
+When it came time for deployment, the $25 Google Play Console fee was an insurmountable barrier for a 12-year-old. I pivoted to the Amazon Appstore, successfully navigating my first ever distribution and publishing pipeline. While the app remains a ghost on the store today with zero downloads, due to lost credentials, I can't update it, edit it, or even take it down. It's officially a permanent part of the internet now. Its persistence is a testament to the fact that I didn't wait for the "perfect" setup to start building. It stands as a permanent marker of my transition from a consumer of technology to a creator, proving that technical constraints are often just an invitation for innovation.`,
+		link: 'https://www.amazon.com/%D8%AD%D8%B3%D9%86%D9%87-%D8%AC%D8%B2%D8%A1-%D8%B9%D9%85-%D8%A8%D8%B5%D9%88%D8%AA-%D8%A7%D9%84%D9%85%D9%86%D8%B4%D8%A7%D9%88%D9%8A/dp/B08BY3N39K/ref=sr_1_1?crid=KW0YZEWCJ37I&dib=eyJ2IjoiMSJ9.FrsKULVYk--4B0GqHLQKqxYNIJNXrEOIfoR84Qj_Plk.ILYgw47XsQQzGvnE1Cv_qf4yaIvKbamQyz-2l5pZZEQ&dib_tag=se&keywords=%D8%AD%D8%B3%D9%86%D8%A9+%D8%AC%D8%B2%D8%A1+%D8%B9%D9%85&qid=1774692153&sprefix=%D8%AD%D8%B3%D9%86%D8%A9+%D8%AC%D8%B2%D8%A1+%D8%B9%D9%85%2Caps%2C434&sr=8-1',
+		image: ['/projects/hasana.webp'],
+		tags: [TAGS.BLOCK_PROGRAMMING, TAGS.JAVA, TAGS.XML, TAGS.ANDROID_DEVELOPMENT],
+		date: '14-06-2020 to 26-06-2020',
+		modalAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 450 },
+		imageAnimation: { animation: 'zoom' as const, duration: 550 }
 	},
-	{
-		title: 'App Discord Peereira7',
-		description: 'Creación y gestión de una aplicación de Discord con más de 50 comandos y soporte completo para todos los eventos. Optimización en la gestión de usuarios y mensajes para mejorar la experiencia en el servidor.',
-		link: 'https://discord.gg/peereira7',
-		image: ['/projects/Servidor_Peereira7.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.DISCORD, TAGS.MONGODB],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.VPS,
-		imageAnimation: { animation: 'zoom' as const, duration: 300 }
-	},
-	{
-		title: 'LibertadCripto - ComuniDAO',
-		description: 'Plataforma para aprender sobre dinero, cripto y web3 con el contenido que se creó. Se puede acceder a la plataforma a través de Discord y la web. Se creó un bot para el servidor de Discord que permite a los usuarios interactuar con la plataforma y obtener mucho aprendizaje. Los usuarios pueden aprender entre si en la plataforma.',
-		link: 'https://www.instagram.com/libertadcripto',
-		image: ['/projects/Servidor_LibertadCripto.webp'],
-		tags: [TAGS.TYPESCRIPT, TAGS.NODE, TAGS.DISCORD, TAGS.MONGODB],
-		status: PROJECT_STATUS.COMPLETED,
-		adminTool: ADMIN_TOOLS.VPS,
-		imageAnimation: { animation: 'slide' as const, from: 'bottom' as const, duration: 500 }
-	}
 ];
 ---
 
 <div class="flex flex-col gap-y-16">
 	{
-		PROJECTS.map(({ image, title, description, tags, link, status, adminTool, history, bgColor, modalAnimation, imageAnimation }) => (
+		PROJECTS.map(({ image, title, description, tags, link, date, history, bgColor, modalAnimation, imageAnimation }) => (
 			<article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
 				<div class="w-full md:w-1/2">
 					<div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-zinc-800 lg:hover:border-zinc-700 lg:hover:bg-zinc-800/50">
@@ -144,22 +212,22 @@ const PROJECTS = [
 				</div>
 
 				<div class="w-full md:w-1/2 md:max-w-lg">
-					<div class="flex items-start justify-between gap-2">
-						<h3 class="text-2xl font-bold text-zinc-800 dark:text-zinc-100">{title}</h3>
-						<span class={`flex gap-x-1 items-center rounded-full text-xs ${status.class} py-1 px-2 whitespace-nowrap`}>
-							<status.icon class="size-3" />
-							{status.name}
+					<div class="flex flex-col gap-2">
+						<span class="flex gap-x-1 items-center rounded-full text-xs w-fit dark:bg-[#0ea5e960] bg-[#0ea5e960] dark:text-zinc-100 text-zinc-900 py-1 px-2 whitespace-nowrap">
+							📅
+							{date}
 						</span>
+						<h3 class="text-2xl font-bold text-zinc-800 dark:text-zinc-100">{title}</h3>
 					</div>
 					<div class="flex flex-wrap mt-2">
 						{tags && tags.length > 0 && (
 							<div class="w-full mb-2">
-								<p class="text-xs text-zinc-600 dark:text-zinc-500 mb-1">Tecnologías:</p>
+								<p class="text-xs text-zinc-600 dark:text-zinc-500 mb-1">Technologies:</p>
 								<ul class="flex xl:flex-row flex-wrap gap-2">
 									{tags.map((tag) => (
 										<li>
 											<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}>
-												<tag.icon class="size-4" />
+													<tag.icon class="size-5" />
 												{tag.name}
 											</span>
 										</li>
@@ -167,60 +235,51 @@ const PROJECTS = [
 								</ul>
 							</div>
 						)}
-						{adminTool && (
-							<div class="w-full mb-2">
-								<p class="text-xs text-zinc-600 dark:text-zinc-500 mb-1">Administración:</p>
-								<span class={`inline-flex gap-x-2 rounded-full text-xs ${adminTool.class} py-1 px-2`}>
-									<adminTool.icon class="size-4" />
-									{adminTool.name}
-								</span>
-							</div>
-						)}
 						{history && history.length > 0 && (
 							<div class="w-full mb-2">
 								<label for={`history-modal-toggle-${title}`} class="inline-flex items-center gap-2 text-xs text-zinc-600 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 cursor-pointer transition">
-									📋 Ver histórico de cambios ({history.length})
+									📋 View change history ({history.length})
 								</label>
 							</div>
 						)}
 						<div class="mt-2 text-zinc-700 dark:text-zinc-400">
 							{description.length > 200 ? (
 								<>
-									{/* Mostramos los primeros 200 caracteres */}
+									{/* Show first 200 characters */}
 									<p>{description.slice(0, 200)}...</p>
-									{/* Botón para ver la descripción completa */}
+									{/* Button to show full description */}
 									<label for={`modal-toggle-${title}`} class="flex items-center gap-2 group-hover:underline decoration-zinc-500 decoration-dotted underline-offset-4 cursor-pointer">
-										Ver más detalles
+										View more details
 										<svg width="13" height="13" stroke="currentColor" stroke-width="2" class="lucide-icon lucide lucide-arrow-up-right opacity-50 duration-200 group-hover:translate-x-[1.5px] group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
 											<path d="M7 7h10v10" />
 											<path d="M7 17 17 7" />
 										</svg>
 									</label>
-									{/* Modal para la descripción completa */}
-									<Modal id={`modal-toggle-${title}`} title={`Detalles de ${title}`} showFooter={true} animation={modalAnimation?.animation ?? 'scale'} from={modalAnimation?.from ?? 'top'} duration={modalAnimation?.duration ?? 350}>
+									{/* Modal for full description */}
+									<Modal id={`modal-toggle-${title}`} title={`Details of ${title}`} showFooter={true} animation={modalAnimation?.animation ?? 'scale'} from={modalAnimation?.from ?? 'top'} duration={modalAnimation?.duration ?? 350}>
 										<p style={{ whiteSpace: 'pre-line' }}>{description}</p>
 									</Modal>
 								</>
 							) : (
 								<p style={{ whiteSpace: 'pre-line' }}>{description}</p>
 							)}
-							{/* Modal de imagen: siempre presente porque el trigger (la imagen izquierda) siempre se renderiza */}
-							<ImageModal id={`image-modal-toggle-${title}`} imageSrc={image[0]} imageAlt={`Imagen ampliada de ${title}`} bgColor={bgColor} animation={imageAnimation?.animation ?? 'zoom'} from={imageAnimation?.from ?? 'top'} duration={imageAnimation?.duration ?? 350} />
+							{/* Image modal: always present because the trigger (the left image) is always rendered */}
+							<ImageModal id={`image-modal-toggle-${title}`} imageSrc={image[0]} imageAlt={`Enlarged image of ${title}`} bgColor={bgColor} animation={imageAnimation?.animation ?? 'zoom'} from={imageAnimation?.from ?? 'top'} duration={imageAnimation?.duration ?? 350} />
 						</div>
 						{history && history.length > 0 && (
-							<Modal id={`history-modal-toggle-${title}`} title={`📋 Histórico de Cambios - ${title}`} maxWidth="3xl" showFooter={true} animation="slide" from="right" duration={400}>
+							<Modal id={`history-modal-toggle-${title}`} title={`📋 Change History - ${title}`} maxWidth="3xl" showFooter={true} animation="slide" from="right" duration={400}>
 								<div class="space-y-4">
 									{history.map((entry, index) => (
 										<div class="border dark:border-white/10 border-zinc-300 rounded-lg p-4">
 											<div class="flex items-center justify-between mb-3">
-												<span class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{index === 0 ? '📅 Versión Inicial' : `📅 Actualización ${index}`}</span>
+												<span class="text-sm font-semibold text-zinc-800 dark:text-zinc-200">{index === 0 ? '📅 Initial Version' : `📅 Update ${index}`}</span>
 												<span class="text-xs text-zinc-600 dark:text-zinc-400">{entry.date}</span>
 											</div>
 											<p class="text-sm text-zinc-700 dark:text-zinc-300 mb-3">{entry.description}</p>
 											<div class="flex flex-wrap gap-2">
 												{entry.tags.map((tag) => (
 													<span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-														<tag.icon class="size-4" />
+														<tag.icon class="size-5" />
 														{tag.name}
 													</span>
 												))}
@@ -231,16 +290,11 @@ const PROJECTS = [
 							</Modal>
 						)}
 						<footer class="flex gap-x-4 items-end justify-start mt-4">
-							{link ? (
+							{link && (
 								<LinkButton href={link}>
 									<Link2 class="size-4 mr-1" />
-									Ir al sitio web
+									Go to website
 								</LinkButton>
-							) : (
-								<span class="inline-flex items-center gap-x-2 rounded-full text-xs bg-zinc-800 text-zinc-400 py-1 px-3 border border-zinc-700">
-									<Lock class="size-4 mr-1" />
-									Enlace privado
-								</span>
 							)}
 						</footer>
 					</div>

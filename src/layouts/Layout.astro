@@ -13,32 +13,26 @@ const { description, title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" data-theme="dark">
+<html lang="en" data-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
-		{import.meta.env.PROD && <base href="https://srgobi.com/" target="_blank" />}
-		<link rel="canonical" href="https://srgobi.com/" />
+		{import.meta.env.PROD && <base href="https://muhamedanber.space/" target="_blank" />}
+		<link rel="canonical" href="https://muhamedanber.space/" />
 		<meta name="og:type" content="website" />
-		<meta name="og:url" content="https://srgobi.com" />
+		<meta name="og:url" content="https://muhamedanber.space" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="https://srgobi.com/wallpaper.png" />
-		<meta name="og:lacale" content="es-ES" />
+		<meta property="og:image" content="https://muhamedanber.space/wallpaper.png" />
+		<meta name="og:locale" content="en" />
 		<meta name="theme-color" content="#5865F2" />
 		<meta name="application-name" content={title} />
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@srgobi" />
-		<meta name="twitter:site:id" content="@srgobi" />
-		<meta name="twitter:creator" content="@srgobi" />
-		<meta name="twitter:creator:id" content="@srgobi" />
-		<meta property="twitter:image" content="https://srgobi.com/wallpaper.png" data-react-helmet="true" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!-- Favicon -->
-		<link rel="icon" href="/icons/srgobi.ico" type="image/x-icon" />
+		<link rel="icon" href="/icons/anber.ico" type="image/x-icon" />
 
-		<!-- Apple Touch Icons -->
+		<!-- Apple Touch Icons
 		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png" />
 		<link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png" />
 		<link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
@@ -48,11 +42,16 @@ const { description, title } = Astro.props;
 		<link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
 		<link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
 
-		<!-- Android Icons -->
+		Android Icons
 		<link rel="icon" sizes="512x512" href="/icons/android-chrome-512x512.png" />
 		<link rel="icon" sizes="192x192" href="/icons/android-chrome-192x192.png" />
 		<link rel="icon" sizes="144x144" href="/icons/android-chrome-144x144.png" />
-		<link rel="icon" sizes="96x96" href="/icons/android-chrome-96x96.png" />
+		<link rel="icon" sizes="96x96" href="/icons/android-chrome-96x96.png" /> -->
+
+		<link rel="icon" href="/icons/favicon-light.png" media="(prefers-color-scheme: light)" />
+		<link rel="icon" href="/icons/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+
+		<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
 
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>

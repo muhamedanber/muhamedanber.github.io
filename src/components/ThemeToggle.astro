@@ -8,15 +8,15 @@ interface Props {
 const { align = 'left' } = Astro.props;
 
 const THEMES = [
-	{ name: 'Claro', value: 'light', icon: Sun },
-	{ name: 'Oscuro', value: 'dark', icon: Moon },
-	{ name: 'Sistema', value: 'system', icon: Monitor }
+	{ name: 'Light', value: 'light', icon: Sun },
+	{ name: 'Dark', value: 'dark', icon: Moon },
+	{ name: 'System', value: 'system', icon: Monitor }
 ];
 ---
 
 <div class="relative ml-1 mr-1">
 	<button transition:persist id="theme-toggle-btn" class="appearance-none border-none flex hover:scale-125 transition cursor-pointer">
-		<span class="sr-only">Elige el tema</span>
+		<span class="sr-only">Choose theme</span>
 		<Sun id="light" class="theme-toggle-icon size-5 transition-all stroke-zinc-800 dark:stroke-zinc-100" />
 		<Moon id="dark" class="theme-toggle-icon absolute size-5 transition-all stroke-zinc-800 dark:stroke-zinc-100" />
 		<Monitor id="system" class="theme-toggle-icon absolute size-5 transition-all stroke-zinc-800 dark:stroke-zinc-100" />
@@ -55,7 +55,7 @@ const THEMES = [
 </style>
 
 <script is:inline>
-	// Evitar múltiples declaraciones
+	// Prevent multiple declarations
 	if (!window.themeToggleInitialized) {
 		window.themeToggleInitialized = true;
 
@@ -89,7 +89,7 @@ const THEMES = [
 
 			updateIcon(themePreference);
 
-			// Usar data-theme en lugar de clases
+			// Use data-theme attribute instead of classes
 			if (themePreference === 'system') {
 				document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
 			} else {
@@ -115,15 +115,15 @@ const THEMES = [
 
 			document.querySelectorAll('.themes-menu-option').forEach((element) => {
 				element.addEventListener('click', () => {
-					// Buscar el span que contiene el texto del tema
+					// Find the span containing the theme name text
 					const themeSpan = element.querySelector('span');
 					const themeName = themeSpan ? themeSpan.innerText.toLowerCase().trim() : '';
 
-					// Mapear los nombres en español a los valores en inglés
+					// Map theme names to their values
 					const themeMap = {
-						claro: 'light',
-						oscuro: 'dark',
-						sistema: 'system'
+						light: 'light',
+						dark: 'dark',
+						system: 'system'
 					};
 
 					const themeValue = themeMap[themeName] || themeName;
@@ -133,7 +133,7 @@ const THEMES = [
 			});
 		};
 
-		// Inicializar inmediatamente y después de cada transición
+		// Initialize immediately and after each transition
 		initializeThemeToggle();
 
 		document.addEventListener('astro:after-swap', () => {

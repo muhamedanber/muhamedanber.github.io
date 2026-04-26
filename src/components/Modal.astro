@@ -14,7 +14,7 @@ interface Props {
 	timing?: string;
 }
 
-const { id, title, maxWidth = '2xl', showHeader = true, showFooter = false, footerContent = 'Cerrar', animation = 'scale', from = 'top', duration = 350, timing = 'spring' } = Astro.props;
+const { id, title, maxWidth = '2xl', showHeader = true, showFooter = false, footerContent = 'close', animation = 'scale', from = 'top', duration = 350, timing = 'spring' } = Astro.props;
 
 const maxWidthClasses = {
 	sm: 'max-w-sm',
@@ -39,7 +39,7 @@ const easing = timing === 'spring' ? 'cubic-bezier(0.16,1,0.3,1)' : timing;
 						{title && <h3 class="text-xl font-semibold text-gray-900 dark:text-zinc-100">{title}</h3>}
 						<label for={id} class="bg-white/5 border dark:border-white/10 border-zinc-300 rounded-full inline-flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 hover:bg-white/10 cursor-pointer">
 							<X class="size-4 text-zinc-900/90 dark:text-zinc-100/90" />
-							<span class="sr-only">Cerrar modal</span>
+							<span class="sr-only">close</span>
 						</label>
 					</div>
 				)

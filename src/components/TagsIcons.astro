@@ -1,5 +1,5 @@
 ---
-import { Check, Clock } from '@lucide/astro';
+import { Check, Clock, Ambulance, Award, BriefcaseBusiness, Blocks, ChartLine, Clapperboard, Code, CodeXml, ClipboardList, Coffee, Database, Flame, Film, FileText, Flag, GraduationCap, HeartHandshake, Leaf, Map, Megaphone, Microscope, Palette, Paintbrush, Podcast, ServerCog, Smartphone, ToolCase, Users, UsersRound, Video, Workflow } from '@lucide/astro';
 import Astroo from './icons/Astroo.astro';
 import Angular from './icons/Angular.astro';
 import Bootstrap from './icons/Bootstrap.astro';
@@ -25,150 +25,277 @@ import Vercel from './icons/Vercel.astro';
 import Express from './icons/Express.astro';
 import Vite from './icons/Vite.astro';
 import Shopify from './icons/Shopify.astro';
+import AndroidLogo from './icons/AndroidLogo.astro';
+import AdobeLogo from './icons/AdobeLogo.astro';
+import JavaLogo from './icons/JavaLogo.astro';
+import ArduinoLogo from './icons/ArduinoLogo.astro';
+import CppLogo from './icons/CppLogo.astro';
+import RiseLogo from './icons/RiseLogo.astro';
 
 export const TAGS = {
 	ASTRO: {
 		name: 'Astro',
-		class: 'dark:bg-[#4a4a4a60] bg-[#4a4a4a80] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#FF5D0180] bg-[#FF5D0160] dark:text-zinc-100 text-zinc-900',
 		icon: Astroo
 	},
 	ANGULAR: {
 		name: 'Angular',
-		class: 'bg-gradient-to-l from-violet-600 to-rose-600 dark:text-zinc-900 text-zinc-100',
+		class: 'dark:bg-[#DD002280] bg-[#DD002260] dark:text-zinc-100 text-zinc-100',
 		icon: Angular
 	},
 	BOOTSTRAP: {
 		name: 'Bootstrap',
-		class: 'dark:bg-[#7E13F860] bg-[#7700ff50] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#7952B380] bg-[#7952B360] dark:text-zinc-100 text-zinc-900',
 		icon: Bootstrap
 	},
 	MARIADB: {
 		name: 'MariaDB',
-		class: 'dark:bg-bg-[#00c4ff60] bg-[#00c4ff50] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#003F5F80] bg-[#003F5F60] dark:text-zinc-100 text-zinc-900',
 		icon: MariaDB
 	},
 	MONGODB: {
 		name: 'MongoDB',
-		class: 'dark:bg-bg-[#13AA5290] bg-[#13aa5260] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#13AA5280] bg-[#13AA5260] dark:text-zinc-100 text-zinc-900',
 		icon: MongoDB
 	},
 	DOCKER: {
 		name: 'Docker',
-		class: 'dark:bg-bg-[#00D8FF30] bg-[#00D8FF30] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#0DB7ED80] bg-[#0DB7ED60] dark:text-zinc-100 text-zinc-900',
 		icon: Docker
 	},
 	NEXT: {
 		name: 'Next.js',
-		class: 'dark:bg-[#00000060] bg-[#000000] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#00000080] bg-[#000000] dark:text-zinc-100 text-zinc-900',
 		icon: NextJS
 	},
 	REACT: {
 		name: 'React',
-		class: 'dark:bg-[#00D8FF40] bg-[#00D8FF40] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#61DAFB80] bg-[#61DAFB60] dark:text-zinc-100 text-zinc-900',
 		icon: React
 	},
 	TAILWIND: {
 		name: 'Tailwind',
-		class: 'dark:bg-[#00315960] bg-[#59b4ff60] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#06B6D480] bg-[#06B6D460] dark:text-zinc-100 text-zinc-900',
 		icon: Tailwind
 	},
 	DISCORD: {
 		name: 'Discord',
-		class: 'dark:bg-[#5865F260] bg-[#5865F260] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#5865F280] bg-[#5865F260] dark:text-zinc-100 text-zinc-900',
 		icon: Discord
 	},
 	JAVASCRIPT: {
 		name: 'JavaScript',
-		class: 'dark:bg-[#F7DF1E60] bg-[#F7DF1E60] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#F7DF1E80] bg-[#F7DF1E60] dark:text-zinc-100 text-zinc-900',
 		icon: JavaScript
 	},
 	TYPESCRIPT: {
 		name: 'TypeScript',
-		class: 'dark:bg-[#3178C660] bg-[#3178C660] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#3178C680] bg-[#3178C660] dark:text-zinc-100 text-zinc-900',
 		icon: TypeScript
 	},
 	NODE: {
 		name: 'Node.js',
-		class: 'dark:bg-[#21573260] bg-[#30b15960] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#68A06380] bg-[#68A06360] dark:text-zinc-100 text-zinc-900',
 		icon: NodeJS
 	},
 	GITHUB: {
 		name: 'GitHub',
-		class: 'dark:bg-[#18171760] bg-[#18171760] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#18171780] bg-[#18171760] dark:text-zinc-100 text-zinc-900',
 		icon: GitHub
 	},
 	PYTHON: {
 		name: 'Python',
-		class: 'dark:bg-[#30699860] bg-[#70beff80] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#3776AB80] bg-[#3776AB60] dark:text-zinc-100 text-zinc-900',
 		icon: Python
 	},
 	JINJA2: {
 		name: 'Jinja2',
-		class: 'dark:bg-[#4a4a4a60] bg-[#4a4a4a60] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#B4171780] bg-[#B4171760] dark:text-zinc-100 text-zinc-900',
 		icon: Jinja2
 	},
 	HTML: {
 		name: 'HTML',
-		class: 'dark:bg-[#E34F2660] bg-[#E34F2660] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#E34C2680] bg-[#E34C2660] dark:text-zinc-100 text-zinc-900',
 		icon: HTML
 	},
 	SQLITE: {
 		name: 'SQLite',
-		class: 'dark:bg-[#003B5760] bg-[#003B5760] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#003B5780] bg-[#003B5760] dark:text-zinc-100 text-zinc-900',
 		icon: SQLite
 	},
 	EXPRESS: {
 		name: 'Express',
-		class: 'dark:bg-[#00000060] bg-[#00000060] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#00000080] bg-[#000000] dark:text-zinc-100 text-zinc-900',
 		icon: Express
 	},
 	VITE: {
 		name: 'Vite',
-		class: 'dark:bg-[#646CFF60] bg-[#646CFF60] dark:text-zinc-100 text-zinc-900',
+		class: 'dark:bg-[#646CFF80] bg-[#646CFF60] dark:text-zinc-100 text-zinc-900',
 		icon: Vite
+	},
+	BLOCK_PROGRAMMING: {
+		name: 'Block Programming',
+		class: 'dark:bg-[#E1523280] bg-[#E1523260] dark:text-zinc-100 text-zinc-900',
+		icon: Blocks
+	},
+	JAVA: {
+		name: 'Java',
+		class: 'dark:bg-[#00739680] bg-[#007396] dark:text-zinc-100 text-zinc-100',
+		icon: JavaLogo
+	},
+	XML: {
+		name: 'XML',
+		class: 'dark:bg-[#FF6B3580] bg-[#FF6B3560] dark:text-zinc-100 text-zinc-900',
+		icon: CodeXml
+	},
+	ANDROID_DEVELOPMENT: {
+		name: 'Android Development',
+		class: 'dark:bg-[#3ddc8480] bg-[#3ddc84] dark:text-zinc-900 text-zinc-900',
+		icon: AndroidLogo
+	},
+	PODCAST: {
+		name: 'Podcast',
+		class: 'dark:bg-[#9d4d2e80] bg-[#9d4d2e60] dark:text-zinc-100 text-zinc-900',
+		icon: Podcast
+	},
+	GRAPHICS_DESIGN: {
+		name: 'Graphics Design',
+		class: 'dark:bg-[#EC489980] bg-[#EC489960] dark:text-zinc-100 text-zinc-900',
+		icon: Palette
+	},
+	ADOBE_CC: {
+		name: 'Adobe CC',
+		class: 'dark:bg-[#FF000080] bg-[#FF0000] dark:text-zinc-100 text-zinc-100',
+		icon: AdobeLogo
+	},
+	MEDIA_PRODUCTION: {
+		name: 'Media Prod.',
+		class: 'dark:bg-[#0ea5e980] bg-[#0ea5e960] dark:text-zinc-100 text-zinc-900',
+		icon: Film
+	},
+	VIDEOGRAPHY: {
+		name: 'Videography',
+		class: 'dark:bg-[#2563eb80] bg-[#2563eb60] dark:text-zinc-100 text-zinc-900',
+		icon: Video
+	},
+	RESEARCH: {
+		name: 'Research',
+		class: 'dark:bg-[#0f766e80] bg-[#0f766e60] dark:text-zinc-100 text-zinc-900',
+		icon: Microscope
+	},
+	SCRIPT_WRITING: {
+		name: 'Script Writing',
+		class: 'dark:bg-[#8b5cf680] bg-[#8b5cf660] dark:text-zinc-100 text-zinc-900',
+		icon: FileText
+	},
+	HUMAN_RIGHTS: {
+		name: 'Human Rights',
+		class: 'dark:bg-[#9333ea80] bg-[#9333ea60] dark:text-zinc-100 text-zinc-900',
+		icon: HeartHandshake
+	},
+	RISE_CHALLENGE: {
+		name: 'Rise Challenge',
+		class: 'dark:bg-[#4f46e580] bg-[#4f46e560] dark:text-zinc-100 text-zinc-900',
+		icon: RiseLogo
+	},
+	VIDEO_EDITING: {
+		name: 'Video Editing',
+		class: 'dark:bg-[#10b98180] bg-[#10b98160] dark:text-zinc-100 text-zinc-900',
+		icon: Clapperboard
+	},
+	PUBLIC_SPEAKING: {
+		name: 'Public Speaking',
+		class: 'dark:bg-[#7c3aed80] bg-[#7c3aed60] dark:text-zinc-100 text-zinc-900',
+		icon: Megaphone
+	},
+	TRAINING: {
+		name: 'Training',
+		class: 'dark:bg-[#eab30880] bg-[#eab30860] dark:text-zinc-100 text-zinc-900',
+		icon: GraduationCap
+	},
+	CAREER_DEVELOPMENT: {
+		name: 'Career Dev.',
+		class: 'dark:bg-[#14b8a680] bg-[#14b8a660] dark:text-zinc-100 text-zinc-900',
+		icon: BriefcaseBusiness
+	},
+	ARDUINO: {
+		name: 'Arduino',
+		class: 'dark:bg-[#00979d80] bg-[#00979d] dark:text-zinc-100 text-zinc-100',
+		icon: ArduinoLogo
+	},
+	CPP: {
+		name: 'C++',
+		class: 'dark:bg-[#00599C80] bg-[#00599C] dark:text-zinc-100 text-zinc-100',
+		icon: CppLogo
+	},
+	ENVIRONMENTAL_AWARENESS: {
+		name: 'Environmental Awareness',
+		class: 'dark:bg-[#22c55e80] bg-[#22c55e60] dark:text-zinc-100 text-zinc-900',
+		icon: Leaf
+	},
+	TEAM_LEADING: {
+		name: 'Team Leading',
+		class: 'dark:bg-[#0ea5e980] bg-[#0ea5e960] dark:text-zinc-100 text-zinc-900',
+		icon: Users
+	},
+	PROTOTYPE_BUILDING: {
+		name: 'Prototype Building',
+		class: 'dark:bg-[#f59e0b80] bg-[#f59e0b60] dark:text-zinc-100 text-zinc-900',
+		icon: ToolCase
+	},
+	REPORT_MAKING: {
+		name: 'Report Making',
+		class: 'dark:bg-[#f9731680] bg-[#f9731670] dark:text-zinc-100 text-zinc-900',
+		icon: ClipboardList
+	},
+	DB_MANAGEMENT: {
+		name: 'DB Management',
+		class: 'dark:bg-[#0ea5e960] bg-[#0ea5e960] dark:text-zinc-100 text-zinc-900',
+		icon: Database
+	},
+	PLAN_MAKING: {
+		name: 'Plan Making',
+		class: 'dark:bg-[#f59e0b60] bg-[#f59e0b60] dark:text-zinc-100 text-zinc-900',
+		icon: Map
+	},
+	TEAMWORK: {
+		name: 'Teamwork',
+		class: 'dark:bg-[#34d39960] bg-[#34d39960] dark:text-zinc-100 text-zinc-900',
+		icon: Users
+	},
+	TEAM_WORK: {
+		name: 'Team Work',
+		class: 'dark:bg-[#34d39960] bg-[#34d39960] dark:text-zinc-100 text-zinc-900',
+		icon: UsersRound
+	},
+	SYSTEM_ADMIN: {
+		name: 'System Admin',
+		class: 'dark:bg-[#22c55e60] bg-[#22c55e60] dark:text-zinc-100 text-zinc-900',
+		icon: ServerCog
+	},
+	CHAIN_OF_COMMAND: {
+		name: 'Chain of Command',
+		class: 'dark:bg-[#a855f760] bg-[#a855f760] dark:text-zinc-100 text-zinc-900',
+		icon: Workflow
+	},
+	TEAM_ANALYSIS: {
+		name: 'Team Analysis',
+		class: 'dark:bg-[#818cf860] bg-[#818cf860] dark:text-zinc-100 text-zinc-900',
+		icon: ChartLine
+	},
+	HIGH_DEMANDING: {
+		name: 'High Demanding',
+		class: 'dark:bg-[#f8717170] bg-[#f8717170] dark:text-zinc-100 text-zinc-900',
+		icon: Flame
+	},
+	EMS: {
+		name: 'EMS',
+		class: 'dark:bg-[#38bdf860] bg-[#38bdf860] dark:text-zinc-100 text-zinc-900',
+		icon: Ambulance
+	},
+	NATIONAL_REPRESENTING: {
+		name: 'National Representing',
+		class: 'dark:bg-[#065f4660] bg-[#065f46] dark:text-zinc-100 text-zinc-100',
+		icon: Map
 	}
 };
-
-// Herramientas de administración
-export const ADMIN_TOOLS = {
-	WORDPRESS: {
-		name: 'WordPress',
-		class: 'dark:bg-[#21759B60] bg-[#21759B60] dark:text-zinc-100 text-zinc-900',
-		icon: WordPress
-	},
-	VPS: {
-		name: 'VPS',
-		class: 'dark:bg-[#FF6B6B60] bg-[#FF6B6B60] dark:text-zinc-100 text-zinc-900',
-		icon: VPS
-	},
-	CLOUD: {
-		name: 'Cloud',
-		class: 'dark:bg-[#4A90E260] bg-[#4A90E260] dark:text-zinc-100 text-zinc-900',
-		icon: Cloud
-	},
-	VERCEL: {
-		name: 'Vercel',
-		class: 'dark:bg-[#00000060] bg-[#00000060] dark:text-zinc-100 text-zinc-900',
-		icon: Vercel
-	},
-	SHOPIFY: {
-		name: 'Shopify',
-		class: 'dark:bg-[#96bf4860] bg-[#96bf4860] dark:text-zinc-100 text-zinc-900',
-		icon: Shopify
-	}
-};
-
-// Estados de proyectos
-export const PROJECT_STATUS = {
-	COMPLETED: {
-		name: 'Completado',
-		class: 'dark:bg-[#10B98160] bg-[#10B98160] dark:text-zinc-100 text-zinc-900',
-		icon: Check
-	},
-	IN_PROGRESS: {
-		name: 'En Proceso',
-		class: 'dark:bg-[#F59E0B60] bg-[#F59E0B60] dark:text-zinc-100 text-zinc-900',
-		icon: Clock
-	}
-};
----

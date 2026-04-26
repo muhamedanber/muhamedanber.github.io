@@ -1,36 +1,54 @@
 ---
 import ThemeToggle from './ThemeToggle.astro';
-import { Briefcase, CodeXml, User, Mail } from '@lucide/astro';
+import { Heart, CodeXml, Zap, Mic, Award, Mail, User } from '@lucide/astro';
 const navItems = [
 	{
-		title: 'Experiencia',
-		label: 'experiencia',
-		url: '/#experiencia',
-		icon: Briefcase
+		title: 'Red Crescents',
+		label: 'red-crescents',
+		url: '/#red-crescents',
+		icon: Heart
 	},
 	{
-		title: 'Proyectos',
-		label: 'proyectos',
-		url: '/#proyectos',
+		title: 'Projects',
+		label: 'projects',
+		url: '/#projects',
 		icon: CodeXml
 	},
 	{
-		title: 'Sobre mí',
-		label: 'sobre-mi',
-		url: '/#sobre-mi',
-		icon: User
+		title: 'Skills',
+		label: 'skills',
+		url: '/#skills',
+		icon: Zap
 	},
 	{
-		title: 'Contacto',
-		label: 'contacto',
-		url: 'mailto:contacto@srgobi.com',
+		title: 'Talks',
+		label: 'talks',
+		url: '/#talks',
+		icon: Mic
+	},
+	{
+		title: 'Certifications',
+		label: 'certifications',
+		url: '/#certifications',
+		icon: Award
+	},
+	{
+		title: 'Contact',
+		label: 'contact',
+		url: '/#contact',
 		icon: Mail
+	},
+	{
+		title: 'About',
+		label: 'about',
+		url: '/#about',
+		icon: User
 	}
 ];
 ---
 
 <header id="desktop-header" class="md:flex hidden fixed top-0 z-20 w-full items-center justify-center px-8 py-3">
-	<!-- Nav + ThemeToggle en una sola píldora -->
+	<!-- Nav + ThemeToggle in one pill -->
 	<nav class="desktop-nav flex items-center gap-1 rounded-full px-4 py-2 bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md border border-zinc-200/60 dark:border-zinc-700/50 shadow-sm">
 		{
 			navItems.map((link) => (
@@ -49,7 +67,7 @@ const navItems = [
 <nav class="md:invisible visible fixed bottom-0 left-1/2 -translate-x-1/2 z-50 mb-4 w-[90%] max-w-md rounded-full bg-neutral-200/70 dark:bg-black/50 backdrop-blur-sm shadow-lg mobile-nav" id="mobile-nav">
 	<div class="grid h-full grid-cols-4 font-medium py-2 px-2">
 		{
-			navItems.map((link) => (
+			navItems.slice(0, 4).map((link) => (
 				<a href={link.url} class="mobile-nav-item inline-flex flex-col items-center justify-center gap-1 px-2 py-2 hover:bg-white/20 dark:hover:bg-white/10 active:scale-95 group rounded-full transition-all duration-300 ease-in-out" aria-label={link.label} data-section={link.label}>
 					<link.icon size={20} class="nav-icon text-zinc-600 dark:text-zinc-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 group-hover:scale-110 transition-all duration-300" />
 					<span class="nav-text text-[10px] font-medium text-zinc-600 dark:text-zinc-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-all duration-300">{link.title}</span>
@@ -173,8 +191,8 @@ const navItems = [
 
 <style>
 	header {
-		/* Sin transform ni animación en el header para evitar stacking context
-		   que bloquearía backdrop-filter en la nav pill hija */
+		/* No transform or animation in header to avoid stacking context
+		   that would block backdrop-filter in nav pill child */
 		transition: opacity 0.35s ease;
 	}
 
@@ -211,7 +229,7 @@ const navItems = [
 		pointer-events: none;
 	}
 
-	/* Estado activo para navegación móvil */
+	/* Active state for mobile navigation */
 	.mobile-nav-item.active {
 		background-color: rgba(255, 255, 255, 0.2);
 		transform: scale(1.05);

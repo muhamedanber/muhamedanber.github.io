@@ -1,5 +1,5 @@
 {
-  "name": "srgobi",
+  "name": "Anber",
   "type": "module",
   "version": "0.0.3",
   "scripts": {
@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "astro build && gh-pages -d dist"
   },
   "dependencies": {
     "@astrojs/check": "0.9.6",
@@ -18,6 +19,9 @@
     "astro-robots-txt": "1.0.0",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   },
   "trustedDependencies": [
     "@tailwindcss/oxide",

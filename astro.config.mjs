@@ -7,8 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
 	integrations: [robotsTxt()],
-	site: 'https://srgobi.com',
+	site: 'https://muhamedanber.space',
 	vite: {
+		// @ts-ignore - Tailwind CSS v4 Vite plugin type compatibility
 		plugins: [tailwindcss()]
 	}
 });
